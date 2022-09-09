@@ -16,6 +16,10 @@
 /** @type {typeof import('@adonisjs/framework/src/Route/Manager')} */
 const Route = use('Route')
 
-Route.get('/', () => {
-  return { greeting: 'Hello world in JSON' }
+Route.get('/courses', () => {
+  return { greeting: 'Rota que lista os cursos' }
 })
+
+Route.post('/courses', 'CourseController.store')
+Route.patch('/courses/id', 'CourseController.update')
+Route.delete('/courses/id', 'CourseController.delete')
