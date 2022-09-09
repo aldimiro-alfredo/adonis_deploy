@@ -20,7 +20,7 @@ class CourseController {
 
     async store({ request }) {
 
-        const payloadCurso = input.only(payload)
+        const payloadCurso = request.only(payload)
 
         const curso = await Course.create(payloadCurso);
 
@@ -30,7 +30,7 @@ class CourseController {
 
     async update({ request, params }) {
 
-        const payloadCurso = input.only(payload)
+        const payloadCurso = request.only(payload)
 
         const curso = await Course.find(params.id)
 
