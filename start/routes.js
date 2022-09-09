@@ -20,6 +20,7 @@ Route.get('/courses', () => {
   return { greeting: 'Rota que lista os cursos' }
 })
 
+Route.get('/listagem', 'CourseController.index')
 Route.post('/courses', 'CourseController.store')
 Route.patch('/courses/id', 'CourseController.update')
 Route.delete('/courses/id', 'CourseController.delete')
