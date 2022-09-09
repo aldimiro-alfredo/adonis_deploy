@@ -75,7 +75,7 @@ module.exports = {
     connection: {
       connectionString: Env.get('DATABASE_URL', ''),
       ssl: {
-        rejectUnauthorized: true
+        rejectUnauthorized: false
       }
     },
   }
