@@ -13,8 +13,10 @@ class CourseController {
 
     async index({ request }) {
 
-        const cursos = await Course.all()
+        // listar cursos
 
+        const cursos = await Course.all()
+        
         return cursos
     }
 
